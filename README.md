@@ -11,3 +11,4 @@ docker-compose build
 docker volume ls
 docker volume rm inventorysm_dev-db-data
 docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage.py migrate"
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
